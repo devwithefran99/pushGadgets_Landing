@@ -9,7 +9,7 @@ ol,ul,li{
 }
 .container{
   width: 1280px;
-  margin: 0 auto;
+  max-width: 100%;
 }
 
 /* common css starts */
@@ -456,6 +456,7 @@ ol,ul,li{
       display: none;
       list-style: none;
       background: rgba(255,255,255,0.02);
+      z-index: 2;
     }
     .sidebar-sub.open { display: block; }
     .sidebar-sub a {
@@ -498,324 +499,156 @@ ol,ul,li{
     }
 /* navBar css ends */
 /* hero part starts */
-    .hero-wrapper {
-      padding: 18px 0 0;
-      background: linear-gradient(135deg, #0d0f1a 0%, #141624 60%, #0a1628 100%);
-    }
- 
-    /* ===== SLIDER ===== */
-    .slider-col { padding-right: 10px; }
- 
-    .slider-container {
-      position: relative;
-      border-radius: 18px;
-      overflow: hidden;
-      background: #0a1020;
-      box-shadow: 0 8px 50px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.06);
-      aspect-ratio: 16/7.5;
-    }
- 
-    .slide {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
-      transform: scale(1.03);
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-    }
- 
-    .slide.active {
-      opacity: 1;
-      transform: scale(1);
-      z-index: 2;
-    }
- 
-    /* Slide 1 – Samsung Galaxy S26 */
-    .slide-1 {
-      background: linear-gradient(120deg, #7b6fa0 0%, #b8aed4 40%, #d4cee8 100%);
-    }
-    .slide-1 .slide-bg-img {
-      position: absolute; right: -20px; bottom: 0; height: 115%;
-      filter: drop-shadow(-20px 0 40px rgba(80,60,120,0.5));
-      animation: floatPhone 4s ease-in-out infinite;
-    }
-    .slide-1 .slide-content { position: relative; z-index: 3; padding: 32px 36px; }
-    .slide-1 .eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(50,30,80,0.8); font-weight: 700; margin-bottom: 6px; }
-    .slide-1 .title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(28px, 4.5vw, 56px); font-weight: 800; line-height: 1; color: #1a1030; margin-bottom: 4px; }
-    .slide-1 .subtitle { font-size: clamp(13px, 1.8vw, 18px); color: #3a2860; font-weight: 600; margin-bottom: 18px; }
- 
-    /* Slide 2 – iPhone */
-    .slide-2 {
-      background: linear-gradient(130deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
-    }
-    .slide-2 .slide-bg-img {
-      position: absolute; right: 0; bottom: 0; height: 110%;
-      filter: drop-shadow(-30px 10px 60px rgba(0,198,255,0.3));
-      animation: floatPhone 3.5s ease-in-out infinite;
-    }
-    .slide-2 .slide-content { position: relative; z-index: 3; padding: 32px 36px; }
-    .slide-2 .eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
-    .slide-2 .title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(28px, 4.5vw, 56px); font-weight: 800; line-height: 1; color: #ffffff; margin-bottom: 4px; }
-    .slide-2 .subtitle { font-size: clamp(13px, 1.8vw, 18px); color: #aab4c8; font-weight: 600; margin-bottom: 18px; }
- 
-    /* Slide 3 – Offer */
-    .slide-3 {
-      background: linear-gradient(120deg, #0a1628 0%, #112240 60%, #0d1b35 100%);
-    }
-    .slide-3 .slide-bg-deco {
-      position: absolute; right: 30px; top: 50%; transform: translateY(-50%);
-      font-size: 140px; font-weight: 900; font-family: 'Barlow Condensed', sans-serif;
-      color: rgba(255,107,0,0.08); line-height: 1;
-      animation: pulse-deco 3s ease-in-out infinite;
-    }
-    .slide-3 .slide-content { position: relative; z-index: 3; padding: 32px 36px; }
-    .slide-3 .eyebrow { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--primary); font-weight: 700; margin-bottom: 6px; }
-    .slide-3 .title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(28px, 4.5vw, 56px); font-weight: 800; line-height: 1; color: #ffffff; margin-bottom: 4px; }
-    .slide-3 .subtitle { font-size: clamp(13px, 1.8vw, 18px); color: #aab4c8; font-weight: 600; margin-bottom: 18px; }
- 
-    @keyframes floatPhone {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
-    @keyframes pulse-deco {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
- 
-    /* Slide badge row */
-    .slide-badges { display: flex; gap: 14px; flex-wrap: wrap; }
-    .slide-badge {
-      display: flex; align-items: center; gap: 7px;
-      background: rgba(255,255,255,0.12); backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 10px; padding: 8px 14px;
-      font-size: 12px; font-weight: 700; color: #fff;
-      text-transform: uppercase; letter-spacing: 0.5px;
-    }
-    .slide-badge i { font-size: 16px; color: var(--primary); }
-    .slide-badge span { display: block; font-size: 9px; font-weight: 500; opacity: 0.7; letter-spacing: 1px; }
- 
-    /* Slider Controls */
-    .slider-prev, .slider-next {
-      position: absolute; top: 50%; transform: translateY(-50%);
-      z-index: 10; width: 36px; height: 36px;
-      background: rgba(255,255,255,0.12); backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 50%; color: #fff; font-size: 14px;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; transition: all 0.3s ease;
-    }
-    .slider-prev:hover, .slider-next:hover {
-      background: var(--primary); border-color: var(--primary);
-      transform: translateY(-50%) scale(1.1);
-    }
-    .slider-prev { left: 14px; }
-    .slider-next { right: 14px; }
- 
-    /* Dots */
-    .slider-dots {
-      position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
-      z-index: 10; display: flex; gap: 7px;
-    }
-    .dot {
-      width: 7px; height: 7px; border-radius: 50%;
-      background: rgba(255,255,255,0.35); cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .dot.active { width: 22px; border-radius: 4px; background: var(--primary); }
- 
-    /* ===== SIDE BANNERS ===== */
-    .banners-col { padding-left: 10px; }
- 
-    .side-banner {
-      border-radius: 15px; overflow: hidden; position: relative;
-      display: flex; align-items: center;
-      box-shadow: 0 6px 30px rgba(0,0,0,0.5);
-      transition: transform 0.35s cubic-bezier(.4,0,.2,1), box-shadow 0.35s ease;
-      cursor: pointer; min-height: 140px;
-    }
-    .side-banner:hover {
-      transform: translateY(-4px) scale(1.01);
-      box-shadow: 0 16px 50px rgba(0,0,0,0.6);
-    }
-    .side-banner:first-child { margin-bottom: 12px; }
- 
-    /* Banner 1 – Apple Gadgets Care */
-    .banner-apple {
-      background: linear-gradient(135deg, #0a1628 0%, #0e1f3d 60%, #112448 100%);
-      border: 1px solid rgba(0,198,255,0.15);
-    }
-    .banner-apple::before {
-      content: ''; position: absolute; top: -40px; right: -40px;
-      width: 140px; height: 140px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,198,255,0.15) 0%, transparent 70%);
-    }
-    .banner-apple-img {
-      position: absolute; right: 0; top: 0; bottom: 0;
-      width: 45%; object-fit: cover; opacity: 0.7;
-      mix-blend-mode: luminosity;
-    }
-    .banner-apple-content { position: relative; z-index: 2; padding: 18px 20px; }
-    .banner-apple .apple-logo { display: flex; align-items: center; gap: 5px; margin-bottom: 6px; }
-    .banner-apple .apple-logo i { color: var(--accent); font-size: 13px; }
-    .banner-apple .apple-logo span { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); font-weight: 700; }
-    .banner-apple .banner-title { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: 4px; }
-    .banner-apple .banner-title em { font-style: italic; color: var(--primary); }
-    .banner-apple .banner-sub { font-size: 9.5px; color: var(--muted); margin-bottom: 8px; letter-spacing: 0.5px; }
-    .banner-apple .phone-badge {
-      display: inline-flex; align-items: center; gap: 5px;
-      background: var(--primary); border-radius: 8px;
-      padding: 5px 10px; font-size: 12px; font-weight: 800; color: #fff;
-    }
- 
-    /* Banner 2 – Panasonic */
-    .banner-panasonic {
-      background: linear-gradient(135deg, #f5a623 0%, #f5c518 50%, #e8b800 100%);
-      border: 1px solid rgba(255,200,0,0.3);
-    }
-    .banner-panasonic::before {
-      content: ''; position: absolute; top: -30px; left: -30px;
-      width: 120px; height: 120px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
-    }
-    .banner-panasonic-img {
-      position: absolute; right: -10px; bottom: -5px;
-      height: 120%; width: auto; object-fit: contain;
-      filter: drop-shadow(-10px 0 20px rgba(0,0,0,0.3));
-      animation: floatPhone 4.5s ease-in-out infinite;
-    }
-    .banner-panasonic-content { position: relative; z-index: 2; padding: 18px 20px; }
-    .banner-panasonic .brand-tag { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(0,0,0,0.6); font-weight: 700; margin-bottom: 4px; }
-    .banner-panasonic .banner-title { font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 900; color: #1a1000; line-height: 1.1; margin-bottom: 3px; }
-    .banner-panasonic .banner-sub { font-size: 11px; color: rgba(0,0,0,0.6); font-weight: 600; margin-bottom: 8px; }
-    .banner-panasonic .warranty-badge {
-      display: inline-flex; align-items: center; gap: 5px;
-      background: rgba(0,0,0,0.15); border-radius: 8px;
-      padding: 5px 10px; font-size: 11px; font-weight: 800; color: #1a1000;
-    }
-    .banner-panasonic .warranty-badge i { color: #2d7a2d; }
- 
-    /* ===== FEATURES BAR ===== */
-    .features-bar {
-      margin-top: 16px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: 16px;
-      padding: 16px 10px;
-    }
- 
-    .feature-item {
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 8px; text-align: center; padding: 10px 8px;
-      border-radius: 12px;
-      transition: all 0.35s cubic-bezier(.4,0,.2,1);
-      cursor: default;
-      position: relative;
-    }
-    .feature-item::after {
-      content: '';
-      position: absolute; inset: 0; border-radius: 12px;
-      background: var(--primary-glow);
-      opacity: 0; transition: opacity 0.3s ease;
-    }
-    .feature-item:hover::after { opacity: 1; }
-    .feature-item:hover { transform: translateY(-5px); }
-    .feature-item:hover .feat-icon-wrap { transform: scale(1.15) rotate(-5deg); }
- 
-    .feat-icon-wrap {
-      width: 46px; height: 46px; border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px;
-      transition: transform 0.35s cubic-bezier(.4,0,.2,1);
-    }
-    .fi-1 { background: linear-gradient(135deg, #7b2ff7, #4a0099); color: #d4aaff; }
-    .fi-2 { background: linear-gradient(135deg, #f5a623, #c47a00); color: #fff3cc; }
-    .fi-3 { background: linear-gradient(135deg, #00b894, #006b55); color: #adfde0; }
-    .fi-4 { background: linear-gradient(135deg, #e84393, #900050); color: #ffb3d9; }
-    .fi-5 { background: linear-gradient(135deg, #00c6ff, #0078b8); color: #ccf0ff; }
- 
-    .feat-label {
-      font-size: 11.5px; font-weight: 700; color: var(--text); line-height: 1.2;
-      position: relative; z-index: 1;
-    }
- 
-    .feature-divider {
-      width: 1px; background: rgba(255,255,255,0.07);
-      align-self: stretch; margin: 6px 0;
-    }
- 
-    /* ===== ANIMATIONS ===== */
-    @keyframes slideInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideInLeft {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes fadeInScale {
-      from { opacity: 0; transform: scale(0.92); }
-      to { opacity: 1; transform: scale(1); }
-    }
- 
-    .slide.active .slide-content > * {
-      animation: slideInLeft 0.6s cubic-bezier(.4,0,.2,1) both;
-    }
-    .slide.active .slide-content > *:nth-child(1) { animation-delay: 0.1s; }
-    .slide.active .slide-content > *:nth-child(2) { animation-delay: 0.2s; }
-    .slide.active .slide-content > *:nth-child(3) { animation-delay: 0.3s; }
-    .slide.active .slide-content > *:nth-child(4) { animation-delay: 0.45s; }
- 
-    .side-banner { animation: fadeInScale 0.6s cubic-bezier(.4,0,.2,1) both; }
-    .side-banner:nth-child(1) { animation-delay: 0.2s; }
-    .side-banner:nth-child(2) { animation-delay: 0.35s; }
- 
-    .feature-item { animation: slideInUp 0.5s cubic-bezier(.4,0,.2,1) both; }
-    .feature-item:nth-child(1) { animation-delay: 0.4s; }
-    .feature-item:nth-child(3) { animation-delay: 0.5s; }
-    .feature-item:nth-child(5) { animation-delay: 0.6s; }
-    .feature-item:nth-child(7) { animation-delay: 0.7s; }
-    .feature-item:nth-child(9) { animation-delay: 0.8s; }
- 
-    /* ===== MOBILE RESPONSIVE ===== */
-    @media (max-width: 767.98px) {
-      .slider-col { padding-right: 12px; margin-bottom: 12px; }
-      .banners-col { padding-left: 12px; }
- 
-      .side-banners-mobile {
-        display: flex !important;
-        gap: 10px;
-      }
-      .side-banners-mobile .side-banner {
-        flex: 1;
-        min-height: 100px;
-      }
-      .side-banners-mobile .side-banner:first-child { margin-bottom: 0; }
- 
-      .banner-apple .banner-title { font-size: 15px; }
-      .banner-apple .phone-badge { font-size: 10px; padding: 4px 8px; }
-      .banner-panasonic .banner-title { font-size: 16px; }
-      .banner-panasonic-img { height: 100%; }
- 
-      .slide-1 .slide-bg-img,
-      .slide-2 .slide-bg-img { height: 90%; right: -10px; }
- 
-      .feat-label { font-size: 10px; }
-      .feat-icon-wrap { width: 38px; height: 38px; font-size: 16px; border-radius: 10px; }
-    }
- 
-    @media (max-width: 575px) {
-      .slider-container { aspect-ratio: 16/9; }
-      .slide-1 .title, .slide-2 .title, .slide-3 .title { font-size: 22px; }
-      .slide-badge { padding: 5px 8px; font-size: 10px; }
-      .slide-badge i { font-size: 13px; }
-    }
- 
-    /* Phone image placeholder (since we use CSS-based slides) */
-    .phone-svg {
-      position: absolute; right: 20px; bottom: 0; height: 95%;
-      display: flex; align-items: flex-end;
-    }
+   .main-slider {
+  height: 320px;
+}
+
+.main-slider img {
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* slide hidden */
+.slide {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* important */
+.main-slider {
+  position: relative;
+}
+.slide {
+  transition: opacity 1s ease-in-out;
+}
+
+/* arrows */
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.slider-prev { left: 10px; }
+.slider-next { right: 10px; }
+
+/* side banners */
+.side-banner {
+  height: 155px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.side-banner img {
+  object-fit: cover;
+}
+
+/* features */
+.features-bar {
+  background: #f8f9fa;
+}
+.features-bar img{
+  width: 40px;
+}
+.features-bar p{
+  color: var(--bg-bottom);
+}
+/* mobile */
+@media (max-width: 768px) {
+  .main-slider {
+    height: 200px;
+  }
+
+  .main-slider img {
+    width: fit-content;
+    height: 200px;
+  }
+
+  .side-banner {
+    height: 120px;
+  }
+}
 /* hero ends */
+/* categoried part starts */
+.text-orange {
+  color: #ff6b00;
+}
+
+/* CARD */
+.cat-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 10px;
+  text-align: center;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #eee;
+  height: 100%;
+}
+
+.cat-card img {
+  width: 40px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.cat-card p {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* HOVER 🔥 */
+.cat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border-color: #ff6b00;
+}
+
+.cat-card:hover img {
+  transform: scale(1.15);
+}
+
+/* BUTTON */
+.btn-orange {
+  background: #ff6b00;
+  color: #fff;
+  border-radius: 30px;
+}
+
+.btn-orange:hover {
+  background: #e65c00;
+  color: #fff;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .cat-card {
+    padding: 14px 5px;
+  }
+
+  .cat-card img {
+    width: 32px;
+  }
+
+  .cat-card p {
+    font-size: 11px;
+  }
+}
+/* categories ends here */

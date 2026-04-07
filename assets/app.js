@@ -31,77 +31,72 @@ const hamburger  = document.getElementById('hamburgerBtn');
   });
 
   // hero part js
-$(document).ready(function () {
+$(document).ready(function(){
+
   let current = 0;
-  const slides = $('.slide');
-  const dots = $('.dot');
-  const total = slides.length;
-  let autoTimer;
- 
-  function goTo(index) {
-    slides.eq(current).removeClass('active');
-    dots.eq(current).removeClass('active');
-    current = (index + total) % total;
-    slides.eq(current).addClass('active');
-    dots.eq(current).addClass('active');
+  let slides = $(".slide");
+  let total = slides.length;
+
+  function showSlide(index){
+    slides.removeClass("active");
+    slides.eq(index).addClass("active");
   }
- 
-  function startAuto() {
-    autoTimer = setInterval(() => goTo(current + 1), 4500);
-  }
- 
-  function resetAuto() {
-    clearInterval(autoTimer);
-    startAuto();
-  }
- 
-  $('.slider-next').on('click', function () {
-    goTo(current + 1);
-    resetAuto();
+
+  $(".slider-next").click(function(){
+    current = (current + 1) % total;
+    showSlide(current);
   });
- 
-  $('.slider-prev').on('click', function () {
-    goTo(current - 1);
-    resetAuto();
+
+  $(".slider-prev").click(function(){
+    current = (current - 1 + total) % total;
+    showSlide(current);
   });
- 
-  dots.each(function (i) {
-    $(this).on('click', function () {
-      goTo(i);
-      resetAuto();
-    });
-  });
- 
-  // Touch/swipe support
-  let touchStartX = 0;
-  let touchEndX = 0;
- 
-  $('.slider-container').on('touchstart', function (e) {
-    touchStartX = e.originalEvent.changedTouches[0].clientX;
-  });
- 
-  $('.slider-container').on('touchend', function (e) {
-    touchEndX = e.originalEvent.changedTouches[0].clientX;
-    const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 40) {
-      diff > 0 ? goTo(current + 1) : goTo(current - 1);
-      resetAuto();
-    }
-  });
- 
-  startAuto();
- 
-  // Feature items stagger re-trigger on scroll (Intersection Observer)
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        $(entry.target).css('animation-play-state', 'running');
-      }
-    });
-  }, { threshold: 0.2 });
- 
-  $('.feature-item').each(function () {
-    observer.observe(this);
-  });
+  
+  function showSlide(index){
+  $(".slide").removeClass("active");
+  $(".slide").eq(index).addClass("active");
+}
+
+  // auto slide
+  setInterval(function(){
+    current = (current + 1) % total;
+    showSlide(current);
+  }, 3000);
+
 });
   // hero part js ends
+  // categories  js  starts
+$(document).ready(function(){
+
+  function handleCategories(){
+    if($(window).width() >= 992){
+      // Desktop → sob show
+      $(".extra").removeClass("d-none");
+    } else {
+      // Mobile → extra hide
+      $(".extra").addClass("d-none");
+      $("#seeMoreBtn").text("See More");
+    }
+  }
+
+  // run on load
+  handleCategories();
+
+  // run on resize (🔥 important)
+  $(window).resize(function(){
+    handleCategories();
+  });
+
+  // button click
+  $("#seeMoreBtn").click(function(){
+    $(".extra").toggleClass("d-none");
+
+    if($(this).text() == "See More"){
+      $(this).text("Show Less");
+    } else {
+      $(this).text("See More");
+    }
+  });
+
+});
+  // categories ends

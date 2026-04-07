@@ -282,261 +282,206 @@
 <!-- header part ends -->
  <!-- main starts -->
     <main>
-<section id="heroBanner">
-<div class="hero-wrapper">
-  <div class="container-lg">
-    <div class="row g-0">
- 
-      <!-- ===== BIG SLIDER (col-6 / col-12 on mobile) ===== -->
-      <div class="col-12 col-md-7 slider-col">
-        <div class="slider-container">
- 
-          <!-- Slide 1: Galaxy S26 -->
-          <div class="slide slide-1 active">
-            <!-- Phone SVG placeholder -->
-            <svg class="slide-bg-img" viewBox="0 0 220 420" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:10px;bottom:0;height:100%;width:auto;z-index:1;">
-              <defs>
-                <linearGradient id="p1g" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#5a4580"/>
-                  <stop offset="100%" stop-color="#2d1f4a"/>
-                </linearGradient>
-                <linearGradient id="p2g" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#8870bb"/>
-                  <stop offset="100%" stop-color="#4a3375"/>
-                </linearGradient>
-              </defs>
-              <rect x="20" y="10" width="180" height="400" rx="28" fill="url(#p1g)" opacity="0.9"/>
-              <rect x="25" y="15" width="170" height="390" rx="24" fill="url(#p2g)" opacity="0.7"/>
-              <rect x="35" y="28" width="150" height="265" rx="16" fill="#0d0820" opacity="0.9"/>
-              <!-- Camera cluster -->
-              <circle cx="70" cy="320" r="28" fill="#1a1030"/>
-              <circle cx="70" cy="320" r="22" fill="#0d0820"/>
-              <circle cx="60" cy="312" r="10" fill="#222" stroke="#444" stroke-width="1.5"/>
-              <circle cx="80" cy="312" r="10" fill="#222" stroke="#444" stroke-width="1.5"/>
-              <circle cx="70" cy="332" r="10" fill="#222" stroke="#444" stroke-width="1.5"/>
-              <circle cx="60" cy="312" r="5" fill="#1a1a2e"/>
-              <circle cx="80" cy="312" r="5" fill="#1a1a2e"/>
-              <circle cx="70" cy="332" r="5" fill="#1a1a2e"/>
-              <!-- Pen -->
-              <rect x="195" y="60" width="8" height="120" rx="4" fill="#4a3375" opacity="0.8"/>
-              <!-- Screen content -->
-              <rect x="42" y="36" width="136" height="248" rx="12" fill="url(#p1g)" opacity="0.4"/>
-              <text x="110" y="175" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.6)" font-family="sans-serif">Galaxy AI ✦</text>
-              <!-- Speaker -->
-              <rect x="85" y="20" width="50" height="6" rx="3" fill="#2d1f4a"/>
-              <!-- Front camera -->
-              <circle cx="110" cy="23" r="4" fill="#1a0f30"/>
-            </svg>
-            <div class="slide-content">
-              <div class="eyebrow">Beyond the Smartphone</div>
-              <div class="title">Galaxy S26<br/>Series</div>
-              <div class="subtitle">Galaxy AI ✦</div>
-              <div class="slide-badges">
-                <div class="slide-badge"><i class="bi bi-tag-fill"></i><div><b>BEST</b><span>PRICE</span></div></div>
-                <div class="slide-badge"><i class="bi bi-lightning-fill"></i><div><b>SAME DAY</b><span>DELIVERY</span></div></div>
-                <div class="slide-badge"><i class="bi bi-credit-card-fill"></i><div><b>36 MONTH</b><span>EMI</span></div></div>
-              </div>
+<section id="heroBanner" class="py-2 mt-3">
+  <div class="container">
+    <div class="row g-2">
+
+      <!-- ===== MAIN SLIDER ===== -->
+      <div class="col-12 col-md-8">
+        <div class="main-slider position-relative overflow-hidden rounded">
+          <div class="slides position-relative w-100 h-100">
+          <div class="slides">
+
+            <!-- Slide 1 -->
+            <div class="slide active">
+              <img src="./assets/image/Galaxy-S26-Series-Web-Slider-8129.jpg" class="w-100" alt="">
             </div>
-          </div>
- 
-          <!-- Slide 2: iPhone -->
-          <div class="slide slide-2">
-            <svg class="slide-bg-img" viewBox="0 0 200 400" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:15px;bottom:0;height:100%;width:auto;z-index:1;">
-              <defs>
-                <linearGradient id="ip1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stop-color="#2a2a2a"/>
-                  <stop offset="100%" stop-color="#111"/>
-                </linearGradient>
-              </defs>
-              <rect x="15" y="8" width="170" height="384" rx="38" fill="url(#ip1)"/>
-              <rect x="20" y="13" width="160" height="374" rx="34" fill="#1a1a1a"/>
-              <rect x="30" y="22" width="140" height="258" rx="20" fill="#050505"/>
-              <!-- Dynamic island -->
-              <rect x="70" y="30" width="60" height="22" rx="11" fill="#000"/>
-              <circle cx="97" cy="41" r="5" fill="#0a0a0a"/>
-              <!-- Camera bump -->
-              <rect x="28" y="295" width="80" height="80" rx="24" fill="#111"/>
-              <circle cx="55" cy="317" r="14" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
-              <circle cx="83" cy="317" r="14" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
-              <circle cx="68" cy="343" r="14" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
-              <circle cx="55" cy="317" r="8" fill="#050505"/>
-              <circle cx="83" cy="317" r="8" fill="#050505"/>
-              <circle cx="68" cy="343" r="8" fill="#050505"/>
-              <!-- Screen glow -->
-              <rect x="32" y="24" width="136" height="254" rx="18" fill="rgba(0,198,255,0.05)"/>
-              <text x="100" y="150" text-anchor="middle" font-size="12" fill="rgba(0,198,255,0.5)" font-family="sans-serif">iPhone 17 Pro</text>
-              <!-- Side buttons -->
-              <rect x="0" y="100" width="5" height="40" rx="2.5" fill="#1a1a1a"/>
-              <rect x="0" y="150" width="5" height="60" rx="2.5" fill="#1a1a1a"/>
-              <rect x="195" y="120" width="5" height="70" rx="2.5" fill="#1a1a1a"/>
-            </svg>
-            <div class="slide-content">
-              <div class="eyebrow" style="color:var(--accent)">New Arrival 2025</div>
-              <div class="title" style="color:#fff">iPhone 17<br/>Pro Max</div>
-              <div class="subtitle">Titanium. So strong. So light.</div>
-              <div class="slide-badges">
-                <div class="slide-badge" style="background:rgba(0,198,255,0.15);border-color:rgba(0,198,255,0.3)"><i class="bi bi-camera-fill" style="color:var(--accent)"></i><div><b>48MP</b><span>CAMERA</span></div></div>
-                <div class="slide-badge" style="background:rgba(0,198,255,0.15);border-color:rgba(0,198,255,0.3)"><i class="bi bi-battery-full" style="color:var(--accent)"></i><div><b>ALL DAY</b><span>BATTERY</span></div></div>
-                <div class="slide-badge" style="background:rgba(255,107,0,0.15);border-color:rgba(255,107,0,0.3)"><i class="bi bi-credit-card-fill"></i><div><b>36 EMI</b><span>AVAIL</span></div></div>
-              </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <img src="./assets/image/iPad-Pro-M5---2-7000.jpg" class="w-100" alt="">
             </div>
-          </div>
- 
-          <!-- Slide 3: Offer -->
-          <div class="slide slide-3">
-            <div class="slide-bg-deco">SALE</div>
-            <div class="slide-content">
-              <div class="eyebrow" style="color:var(--primary)">Limited Time Offer</div>
-              <div class="title" style="color:#fff">Up to <span style="color:var(--primary)">40%</span><br/>OFF Today!</div>
-              <div class="subtitle">Exchange Old Device — Get Extra Discount</div>
-              <div class="slide-badges">
-                <div class="slide-badge" style="background:rgba(255,107,0,0.2);border-color:rgba(255,107,0,0.4)"><i class="bi bi-arrow-repeat" style="color:var(--primary)"></i><div><b>EXCHANGE</b><span>OFFER</span></div></div>
-                <div class="slide-badge"><i class="bi bi-shield-check-fill" style="color:#00cc66"></i><div><b>WARRANTY</b><span>INCLUDED</span></div></div>
-                <div class="slide-badge"><i class="bi bi-truck" style="color:var(--accent2)"></i><div><b>FREE</b><span>DELIVERY</span></div></div>
-              </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <img src="./assets/image/iPhone-17-series-Web-Slider---V2-5748.jpg" class="w-100" alt="">
             </div>
+
           </div>
- 
-          <!-- Nav -->
-          <div class="slider-prev"><i class="bi bi-chevron-left"></i></div>
-          <div class="slider-next"><i class="bi bi-chevron-right"></i></div>
-          <div class="slider-dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
+
+          <!-- arrows -->
+          <button class="slider-prev">&#10094;</button>
+          <button class="slider-next">&#10095;</button>
+
+        </div>
         </div>
       </div>
- 
-      <!-- ===== SIDE BANNERS (col-5 / col-12 on mobile) ===== -->
-      <div class="col-12 col-md-5 banners-col">
-        <!-- On mobile: flex row (side by side) -->
-        <div class="d-flex flex-column d-md-flex flex-md-column side-banners-mobile" style="height:100%;">
- 
-          <!-- Banner 1: Apple Gadgets Care -->
-          <div class="side-banner banner-apple" style="flex:1;">
-            <!-- Tech circuit decoration -->
-            <svg style="position:absolute;right:0;top:0;width:55%;height:100%;opacity:0.15" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
-              <line x1="20" y1="20" x2="180" y2="20" stroke="#00c6ff" stroke-width="1"/>
-              <line x1="180" y1="20" x2="180" y2="140" stroke="#00c6ff" stroke-width="1"/>
-              <line x1="60" y1="60" x2="140" y2="60" stroke="#00c6ff" stroke-width="1"/>
-              <circle cx="20" cy="20" r="4" fill="#00c6ff"/>
-              <circle cx="180" cy="20" r="4" fill="#00c6ff"/>
-              <circle cx="180" cy="140" r="4" fill="#00c6ff"/>
-              <circle cx="60" cy="60" r="3" fill="#00c6ff"/>
-              <circle cx="140" cy="60" r="3" fill="#00c6ff"/>
-              <line x1="20" y1="20" x2="20" y2="100" stroke="#00c6ff" stroke-width="1"/>
-              <line x1="20" y1="100" x2="60" y2="100" stroke="#00c6ff" stroke-width="1"/>
-              <circle cx="60" cy="100" r="5" fill="none" stroke="#00c6ff" stroke-width="1.5"/>
-              <line x1="100" y1="60" x2="100" y2="140" stroke="#00c6ff" stroke-width="1" stroke-dasharray="4,3"/>
-              <rect x="150" y="80" width="20" height="30" rx="3" fill="none" stroke="#00c6ff" stroke-width="1"/>
-              <line x1="155" y1="110" x2="155" y2="130" stroke="#00c6ff" stroke-width="1"/>
-              <line x1="165" y1="110" x2="165" y2="130" stroke="#00c6ff" stroke-width="1"/>
-            </svg>
-            <!-- Repair hand icon -->
-            <div style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:52px;opacity:0.12;color:#00c6ff;">
-              <i class="bi bi-tools"></i>
-            </div>
-            <div class="banner-apple-content">
-              <div class="apple-logo">
-                <i class="bi bi-apple"></i>
-                <span>iPhone Repair</span>
-              </div>
-              <div class="banner-title">আপনার পাশে<br/><em>Apple Gadgets Care</em></div>
-              <div class="banner-sub">যেকোনো প্রয়োজনে যোগাযোগ করুন</div>
-              <div class="phone-badge">
-                <i class="bi bi-telephone-fill"></i>
-                09678-149 149
-              </div>
-            </div>
+
+      <!-- ===== SIDE BANNERS ===== -->
+      <div class="col-12 col-md-4">
+        <div class="d-flex flex-md-column gap-2 h-100">
+
+          <div class="side-banner">
+            <img src="assets/image/MacBook-Pro-M5-1643.jpg" class="w-100 h-100" alt="">
           </div>
- 
-          <!-- Banner 2: Panasonic Mixer -->
-          <div class="side-banner banner-panasonic" style="flex:1; margin-top: 12px;">
-            <!-- Mixer grinder SVG -->
-            <svg class="banner-panasonic-img" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:5px;bottom:0;height:105%;width:auto;z-index:1;animation:floatPhone 4.5s ease-in-out infinite;">
-              <defs>
-                <linearGradient id="mg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a2a2a"/><stop offset="100%" stop-color="#111"/></linearGradient>
-                <linearGradient id="mg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3a3a3a"/><stop offset="100%" stop-color="#1a1a1a"/></linearGradient>
-              </defs>
-              <!-- Base -->
-              <ellipse cx="80" cy="185" rx="55" ry="12" fill="rgba(0,0,0,0.2)"/>
-              <rect x="45" y="120" width="70" height="70" rx="10" fill="url(#mg1)"/>
-              <rect x="50" y="125" width="60" height="60" rx="8" fill="url(#mg2)"/>
-              <circle cx="80" cy="140" r="12" fill="#444"/>
-              <circle cx="80" cy="140" r="7" fill="#222"/>
-              <!-- Jar 1 (main) -->
-              <rect x="52" y="40" width="56" height="85" rx="8" fill="url(#mg1)"/>
-              <rect x="56" y="44" width="48" height="77" rx="6" fill="rgba(60,60,60,0.8)"/>
-              <rect x="56" y="44" width="48" height="20" rx="6" fill="#333"/>
-              <circle cx="80" cy="44" r="12" fill="#2a2a2a"/>
-              <circle cx="80" cy="44" r="7" fill="#333"/>
-              <!-- Jar 2 (small left) -->
-              <rect x="10" y="70" width="38" height="55" rx="6" fill="url(#mg1)"/>
-              <rect x="13" y="73" width="32" height="49" rx="5" fill="rgba(55,55,55,0.7)"/>
-              <!-- Jar 3 (small right) -->
-              <rect x="112" y="70" width="38" height="55" rx="6" fill="url(#mg1)"/>
-              <rect x="115" y="73" width="32" height="49" rx="5" fill="rgba(55,55,55,0.7)"/>
-              <!-- Handles -->
-              <rect x="38" y="80" width="12" height="30" rx="5" fill="#1a1a1a"/>
-              <rect x="110" y="80" width="12" height="30" rx="5" fill="#1a1a1a"/>
-              <!-- Panasonic label -->
-              <text x="80" y="162" text-anchor="middle" font-size="7" fill="#666" font-family="sans-serif" font-weight="bold">PANASONIC</text>
-            </svg>
-            <div class="banner-panasonic-content">
-              <div class="brand-tag">Panasonic</div>
-              <div class="banner-title">Mixer Grinder<br/><span style="font-size:14px;font-weight:600">(3 Jars)</span></div>
-              <div class="banner-sub">Professional Grade Blending</div>
-              <div class="warranty-badge">
-                <i class="bi bi-shield-fill-check"></i>
-                5 Year Motor Warranty
-              </div>
-            </div>
+
+          <div class="side-banner">
+            <img src="assets/image/Philips-air-fryer-combo-3.jpg" class="w-100 h-100" alt="">
           </div>
- 
+
         </div>
       </div>
+
     </div>
- 
+
     <!-- ===== FEATURES BAR ===== -->
-    <div class="features-bar mt-3 mb-3">
-      <div class="row g-0 align-items-center justify-content-around">
-        <div class="col feature-item">
-          <div class="feat-icon-wrap fi-1"><i class="bi bi-credit-card-2-front-fill"></i></div>
-          <div class="feat-label">36 Months<br/>EMI</div>
+    <div class="features-bar mt-3 p-3 rounded">
+      <div class="row text-center g-2">
+
+        <div class="col-6 col-md">
+          <img src="./assets/image/document-calculator.gif" alt="">
+          <p class="mb-0 small">36 Months EMI</p>
         </div>
-        <div class="col-auto feature-divider d-none d-sm-block"></div>
-        <div class="col feature-item">
-          <div class="feat-icon-wrap fi-2"><i class="bi bi-truck"></i></div>
-          <div class="feat-label">Fastest Home<br/>Delivery</div>
+
+        <div class="col-6 col-md">
+          <img src="./assets/image/truck.gif" alt="">
+          <p class="mb-0 small">Fast Delivery</p>
         </div>
-        <div class="col-auto feature-divider d-none d-sm-block"></div>
-        <div class="col feature-item">
-          <div class="feat-icon-wrap fi-3"><i class="bi bi-arrow-repeat"></i></div>
-          <div class="feat-label">Exchange<br/>Facility</div>
+
+        <div class="col-6 col-md">
+          <img src="./assets/image/exchange.gif" alt="">
+          <p class="mb-0 small">Exchange</p>
         </div>
-        <div class="col-auto feature-divider d-none d-sm-block"></div>
-        <div class="col feature-item">
-          <div class="feat-icon-wrap fi-4"><i class="bi bi-tag-heart-fill"></i></div>
-          <div class="feat-label">Best Price<br/>Deals</div>
+
+        <div class="col-6 col-md">
+          <img src="./assets/image/deal.gif" alt="">
+          <p class="mb-0 small">Best Deals</p>
         </div>
-        <div class="col-auto feature-divider d-none d-sm-block"></div>
-        <div class="col feature-item">
-          <div class="feat-icon-wrap fi-5"><i class="bi bi-headset"></i></div>
-          <div class="feat-label">After-Sales<br/>Service</div>
+
+        <div class="col-12 col-md">
+          <img src="./assets/image/helpdesk.gif" alt="">
+          <p class="mb-0 small">Support</p>
         </div>
+
       </div>
     </div>
- 
+
   </div>
-</div>
- 
 </section>
+
+<!-- categories start here -->
+<section class="featured-categories py-4">
+  <div class="container-lg">
+
+    <h2 class="mb-4 ">
+      Featured <span class="text-orange">Categories</span>
+    </h2>
+
+    <div class="row g-3" id="categoryList">
+
+      <!-- ITEM -->
+      <div class="col-4 col-md-2 category-item">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Mobile Phone</p>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 category-item">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Home Appliances</p>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 category-item">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Tablet</p>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 category-item">
+        <div class="cat-card">
+              <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Headphone</p>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 category-item">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Laptop</p>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 category-item">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Airpods</p>
+        </div>
+      </div>
+
+      <!-- HIDDEN ITEMS -->
+      <div class="col-4 col-md-2 category-item extra d-none">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Smart Watch</p>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 category-item extra d-none">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Speakers</p>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 category-item extra d-none">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Cables</p>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 category-item extra d-none">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Charger</p>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 category-item extra d-none">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Hubs</p>
+        </div>
+      </div>
+
+      <div class="col-4 col-md-2 category-item extra d-none">
+        <div class="cat-card">
+          <img src="assets/image/iPhone-17-Pro-Max-cosmic-orange-8534.png">
+          <p>Smart Pen</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BUTTON -->
+    <div class="text-center mt-4 d-lg-none">
+      <button id="seeMoreBtn" class="btn btn-orange px-4">
+        See More
+      </button>
+    </div>
+
+  </div>
+</section>
+<!-- categories ends here -->
     </main>
 <!-- main ends here -->
 
-    <script src="./assets/app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/app.js"></script>
   </body>
 </html>
