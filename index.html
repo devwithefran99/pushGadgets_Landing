@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pushGadget | Home</title>
+
+    <!-- link part starts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+   <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/responsive.css">
+
+    <!-- link part ends -->
+</head>
+<body>
+    <header>
+     <section id="appleNNav">
+      <div class="container">
+        <!-- nav bar starts -->
+<nav class="top-nav">
+  <div class="container-fluid px-3 px-lg-4">
+    <div class="d-flex align-items-center w-100" style="gap:8px;">
+ 
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Menu">
+        <i class="bi bi-list"></i>
+      </button>
+ 
+      <!-- Logo -->
+      <a href="#" class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Apple-like shape -->
+          <path d="M21 4C17 4 14 7 14 11C14 14 16 16.5 18 17.5C16 18.5 12 21 11 26C10 31 12 37 17 38.5C18.5 39 20 38 21 37C22 38 23.5 39 25 38.5C30 37 32 31 31 26C30 21 26 18.5 24 17.5C26 16.5 28 14 28 11C28 7 25 4 21 4Z" fill="#e0e0e0"/>
+          <path d="M21 4C23.5 4 25.5 5.5 26.5 7.5C27.5 5.5 29 4.5 30.5 5C29.5 3 27 1.5 25 2C23.5 2 21.5 3 21 4Z" fill="#c8c8c8"/>
+          <!-- glow highlight -->
+          <ellipse cx="17" cy="13" rx="2" ry="3" fill="rgba(255,255,255,0.15)"/>
+          <!-- brand text overlay replaced by CSS -->
+        </svg>
+        <div class="logo-text">
+          <span class="logo-brand">gad<span>G</span>ets™</span>
+          <span class="logo-sub">AppleGadgets</span>
+        </div>
+      </a>
+ 
+      <!-- Search -->
+      <div class="search-wrap d-none d-lg-block">
+        <i class="bi bi-search search-icon"></i>
+        <input type="text" placeholder="Search..." autocomplete="off"/>
+      </div>
+ 
+      <!-- Desktop top-right links -->
+      <div class="top-links">
+        <a href="#" class="top-link">Blog</a>
+        <a href="#" class="top-link">Pre-order</a>
+        <a href="#" class="top-link offers"><i class="bi bi-gift-fill"></i> Offers</a>
+        <a href="#" class="compare-link"><i class="bi bi-arrow-left-right"></i> Compare</a>
+      </div>
+ 
+      <!-- Icon buttons -->
+      <div class="icon-wrapper">
+  <a href="#" class="icon-btn d-none d-lg-flex" title="Cart">
+    <i class="bi bi-cart2"></i>
+    <span class="badge-dot">0</span>
+  </a>
+  <a href="#" class="icon-btn d-none d-lg-flex" title="Account">
+    <i class="bi bi-person"></i>
+  </a>
+</div>
+    </div>
+  </div>
+</nav>
+ 
+<!-- ══════════════ BOTTOM CATEGORY NAV ══════════════ -->
+<nav class="bottom-nav">
+  <div class="container-fluid px-3 px-lg-4">
+    <ul class="cat-nav">
+ 
+      <li class="active">
+        <a href="#">Apple Products <i class="bi bi-chevron-down chevron"></i></a>
+        <div class="dropdown-menu-custom">
+          <a href="#"><i class="bi bi-phone"></i> iPhone</a>
+          <a href="#"><i class="bi bi-laptop"></i> MacBook</a>
+          <a href="#"><i class="bi bi-tablet"></i> iPad</a>
+          <a href="#"><i class="bi bi-watch"></i> Apple Watch</a>
+          <a href="#"><i class="bi bi-airplay"></i> AirPods</a>
+          <a href="#"><i class="bi bi-tv"></i> Apple TV</a>
+        </div>
+      </li>
+ 
+      <li>
+        <a href="#">Phones <i class="bi bi-chevron-down chevron"></i></a>
+        <div class="dropdown-menu-custom">
+          <a href="#"><i class="bi bi-phone"></i> Samsung</a>
+          <a href="#"><i class="bi bi-phone"></i> Xiaomi</a>
+          <a href="#"><i class="bi bi-phone"></i> OnePlus</a>
+          <a href="#"><i class="bi bi-phone"></i> Google Pixel</a>
+          <a href="#"><i class="bi bi-phone"></i> OPPO</a>
+        </div>
+      </li>
+ 
+      <li>
+        <a href="#">Tablets & Accessories <i class="bi bi-chevron-down chevron"></i></a>
+        <div class="dropdown-menu-custom">
+          <a href="#"><i class="bi bi-tablet"></i> Android Tablets</a>
+          <a href="#"><i class="bi bi-tablet"></i> iPad Accessories</a>
+          <a href="#"><i class="bi bi-keyboard"></i> Keyboards & Cases</a>
+          <a href="#"><i class="bi bi-pencil"></i> Stylus Pens</a>
+        </div>
+      </li>
+ 
+      <li>
+        <a href="#">Computer & Laptops <i class="bi bi-chevron-down chevron"></i></a>
+        <div class="dropdown-menu-custom">
+          <a href="#"><i class="bi bi-laptop"></i> Laptops</a>
+          <a href="#"><i class="bi bi-pc-display"></i> Desktops</a>
+          <a href="#"><i class="bi bi-cpu"></i> Components</a>
+          <a href="#"><i class="bi bi-display"></i> Monitors</a>
+          <a href="#"><i class="bi bi-mouse2"></i> Peripherals</a>
+        </div>
+      </li>
+ 
+      <li>
+        <a href="#">Gadgets & Accessories <i class="bi bi-chevron-down chevron"></i></a>
+        <div class="dropdown-menu-custom">
+          <a href="#"><i class="bi bi-headphones"></i> Headphones</a>
+          <a href="#"><i class="bi bi-speaker"></i> Speakers</a>
+          <a href="#"><i class="bi bi-battery-charging"></i> Power Banks</a>
+          <a href="#"><i class="bi bi-plug"></i> Chargers & Cables</a>
+          <a href="#"><i class="bi bi-smartwatch"></i> Smartwatches</a>
+        </div>
+      </li>
+ 
+      <li>
+        <a href="#">Home Appliances <i class="bi bi-chevron-down chevron"></i></a>
+        <div class="dropdown-menu-custom">
+          <a href="#"><i class="bi bi-snow"></i> Air Conditioners</a>
+          <a href="#"><i class="bi bi-house"></i> Smart Home</a>
+          <a href="#"><i class="bi bi-wind"></i> Fans</a>
+          <a href="#"><i class="bi bi-thermometer"></i> Heaters</a>
+        </div>
+      </li>
+ 
+      <li>
+        <a href="#">Lifestyle & Travel <i class="bi bi-chevron-down chevron"></i></a>
+        <div class="dropdown-menu-custom">
+          <a href="#"><i class="bi bi-backpack"></i> Bags</a>
+          <a href="#"><i class="bi bi-bicycle"></i> Sports & Fitness</a>
+          <a href="#"><i class="bi bi-geo-alt"></i> Travel Gear</a>
+          <a href="#"><i class="bi bi-heart-pulse"></i> Health & Wellness</a>
+        </div>
+      </li>
+ 
+      <li>
+        <a href="#">Camera & Networking <i class="bi bi-chevron-down chevron"></i></a>
+        <div class="dropdown-menu-custom">
+          <a href="#"><i class="bi bi-camera"></i> DSLR Cameras</a>
+          <a href="#"><i class="bi bi-camera-video"></i> Action Cameras</a>
+          <a href="#"><i class="bi bi-wifi"></i> Routers</a>
+          <a href="#"><i class="bi bi-hdd-network"></i> Networking</a>
+          <a href="#"><i class="bi bi-camera2"></i> Lenses & Accessories</a>
+        </div>
+      </li>
+ 
+    </ul>
+  </div>
+</nav>
+ 
+<!-- ══════════════ MOBILE SIDEBAR ══════════════ -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<aside class="mobile-sidebar" id="mobileSidebar">
+ 
+  <div class="sidebar-header">
+    <a href="#" class="nav-logo" style="gap:6px;">
+      <svg width="32" height="32" viewBox="0 0 42 42" fill="none">
+        <path d="M21 4C17 4 14 7 14 11C14 14 16 16.5 18 17.5C16 18.5 12 21 11 26C10 31 12 37 17 38.5C18.5 39 20 38 21 37C22 38 23.5 39 25 38.5C30 37 32 31 31 26C30 21 26 18.5 24 17.5C26 16.5 28 14 28 11C28 7 25 4 21 4Z" fill="#e0e0e0"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-brand" style="font-size:1.1rem;">gad<span style="color:var(--accent)">G</span>ets™</span>
+        <span style="font-size:0.55rem;color:#777;letter-spacing:2.5px;text-transform:uppercase;">AppleGadgets</span>
+      </div>
+    </a>
+    <button class="sidebar-close" id="sidebarClose"><i class="bi bi-x-lg"></i></button>
+  </div>
+ 
+  <div class="sidebar-search">
+    <input type="text" placeholder="Search products..."/>
+  </div>
+ 
+  <!-- Quick links -->
+  <div style="display:flex;gap:6px;padding:8px 14px 4px;flex-wrap:wrap;">
+    <a href="#" style="color:var(--text-muted);font-size:0.75rem;background:rgba(255,255,255,0.05);padding:4px 10px;border-radius:20px;text-decoration:none;transition:color .2s;">Blog</a>
+    <a href="#" style="color:var(--text-muted);font-size:0.75rem;background:rgba(255,255,255,0.05);padding:4px 10px;border-radius:20px;text-decoration:none;">Pre-order</a>
+    <a href="#" style="color:var(--accent);font-size:0.75rem;background:rgba(255,107,0,0.1);padding:4px 10px;border-radius:20px;text-decoration:none;font-weight:600;">🎁 Offers</a>
+    <a href="#" style="color:var(--text-muted);font-size:0.75rem;background:rgba(255,255,255,0.05);padding:4px 10px;border-radius:20px;text-decoration:none;">⇄ Compare</a>
+  </div>
+ 
+  <ul class="sidebar-cats" id="sidebarCats">
+    <li>
+      <a href="#" data-target="sub1">Apple Products <span><i class="bi bi-chevron-right"></i></span></a>
+      <ul class="sidebar-sub" id="sub1">
+        <li><a href="#">iPhone</a></li>
+        <li><a href="#">MacBook</a></li>
+        <li><a href="#">iPad</a></li>
+        <li><a href="#">Apple Watch</a></li>
+        <li><a href="#">AirPods</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" data-target="sub2">Phones <span><i class="bi bi-chevron-right"></i></span></a>
+      <ul class="sidebar-sub" id="sub2">
+        <li><a href="#">Samsung</a></li>
+        <li><a href="#">Xiaomi</a></li>
+        <li><a href="#">OnePlus</a></li>
+        <li><a href="#">Google Pixel</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" data-target="sub3">Tablets & Accessories <span><i class="bi bi-chevron-right"></i></span></a>
+      <ul class="sidebar-sub" id="sub3">
+        <li><a href="#">Android Tablets</a></li>
+        <li><a href="#">iPad Accessories</a></li>
+        <li><a href="#">Keyboards & Cases</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" data-target="sub4">Computer & Laptops <span><i class="bi bi-chevron-right"></i></span></a>
+      <ul class="sidebar-sub" id="sub4">
+        <li><a href="#">Laptops</a></li>
+        <li><a href="#">Desktops</a></li>
+        <li><a href="#">Monitors</a></li>
+        <li><a href="#">Peripherals</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" data-target="sub5">Gadgets & Accessories <span><i class="bi bi-chevron-right"></i></span></a>
+      <ul class="sidebar-sub" id="sub5">
+        <li><a href="#">Headphones</a></li>
+        <li><a href="#">Speakers</a></li>
+        <li><a href="#">Power Banks</a></li>
+        <li><a href="#">Smartwatches</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" data-target="sub6">Home Appliances <span><i class="bi bi-chevron-right"></i></span></a>
+      <ul class="sidebar-sub" id="sub6">
+        <li><a href="#">Air Conditioners</a></li>
+        <li><a href="#">Smart Home</a></li>
+        <li><a href="#">Fans</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" data-target="sub7">Lifestyle & Travel <span><i class="bi bi-chevron-right"></i></span></a>
+      <ul class="sidebar-sub" id="sub7">
+        <li><a href="#">Bags</a></li>
+        <li><a href="#">Sports & Fitness</a></li>
+        <li><a href="#">Travel Gear</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#" data-target="sub8">Camera & Networking <span><i class="bi bi-chevron-right"></i></span></a>
+      <ul class="sidebar-sub" id="sub8">
+        <li><a href="#">DSLR Cameras</a></li>
+        <li><a href="#">Routers</a></li>
+        <li><a href="#">Networking</a></li>
+      </ul>
+    </li>
+  </ul>
+ 
+  <div class="sidebar-footer">
+    <a href="#"><i class="bi bi-cart2 me-1"></i>Cart</a>
+    <a href="#"><i class="bi bi-person me-1"></i>Account</a>
+    <a href="#"><i class="bi bi-heart me-1"></i>Wishlist</a>
+  </div>
+ 
+</aside>
+<!-- navbar ends -->
+      </div>
+     </section>
+    </header>
+<!-- header part ends -->
+ <!-- main starts -->
+    <main>
+<section id="heroBanner">
+<div class="hero-wrapper">
+  <div class="container-lg">
+    <div class="row g-0">
+ 
+      <!-- ===== BIG SLIDER (col-6 / col-12 on mobile) ===== -->
+      <div class="col-12 col-md-7 slider-col">
+        <div class="slider-container">
+ 
+          <!-- Slide 1: Galaxy S26 -->
+          <div class="slide slide-1 active">
+            <!-- Phone SVG placeholder -->
+            <svg class="slide-bg-img" viewBox="0 0 220 420" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:10px;bottom:0;height:100%;width:auto;z-index:1;">
+              <defs>
+                <linearGradient id="p1g" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#5a4580"/>
+                  <stop offset="100%" stop-color="#2d1f4a"/>
+                </linearGradient>
+                <linearGradient id="p2g" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#8870bb"/>
+                  <stop offset="100%" stop-color="#4a3375"/>
+                </linearGradient>
+              </defs>
+              <rect x="20" y="10" width="180" height="400" rx="28" fill="url(#p1g)" opacity="0.9"/>
+              <rect x="25" y="15" width="170" height="390" rx="24" fill="url(#p2g)" opacity="0.7"/>
+              <rect x="35" y="28" width="150" height="265" rx="16" fill="#0d0820" opacity="0.9"/>
+              <!-- Camera cluster -->
+              <circle cx="70" cy="320" r="28" fill="#1a1030"/>
+              <circle cx="70" cy="320" r="22" fill="#0d0820"/>
+              <circle cx="60" cy="312" r="10" fill="#222" stroke="#444" stroke-width="1.5"/>
+              <circle cx="80" cy="312" r="10" fill="#222" stroke="#444" stroke-width="1.5"/>
+              <circle cx="70" cy="332" r="10" fill="#222" stroke="#444" stroke-width="1.5"/>
+              <circle cx="60" cy="312" r="5" fill="#1a1a2e"/>
+              <circle cx="80" cy="312" r="5" fill="#1a1a2e"/>
+              <circle cx="70" cy="332" r="5" fill="#1a1a2e"/>
+              <!-- Pen -->
+              <rect x="195" y="60" width="8" height="120" rx="4" fill="#4a3375" opacity="0.8"/>
+              <!-- Screen content -->
+              <rect x="42" y="36" width="136" height="248" rx="12" fill="url(#p1g)" opacity="0.4"/>
+              <text x="110" y="175" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.6)" font-family="sans-serif">Galaxy AI ✦</text>
+              <!-- Speaker -->
+              <rect x="85" y="20" width="50" height="6" rx="3" fill="#2d1f4a"/>
+              <!-- Front camera -->
+              <circle cx="110" cy="23" r="4" fill="#1a0f30"/>
+            </svg>
+            <div class="slide-content">
+              <div class="eyebrow">Beyond the Smartphone</div>
+              <div class="title">Galaxy S26<br/>Series</div>
+              <div class="subtitle">Galaxy AI ✦</div>
+              <div class="slide-badges">
+                <div class="slide-badge"><i class="bi bi-tag-fill"></i><div><b>BEST</b><span>PRICE</span></div></div>
+                <div class="slide-badge"><i class="bi bi-lightning-fill"></i><div><b>SAME DAY</b><span>DELIVERY</span></div></div>
+                <div class="slide-badge"><i class="bi bi-credit-card-fill"></i><div><b>36 MONTH</b><span>EMI</span></div></div>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Slide 2: iPhone -->
+          <div class="slide slide-2">
+            <svg class="slide-bg-img" viewBox="0 0 200 400" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:15px;bottom:0;height:100%;width:auto;z-index:1;">
+              <defs>
+                <linearGradient id="ip1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#2a2a2a"/>
+                  <stop offset="100%" stop-color="#111"/>
+                </linearGradient>
+              </defs>
+              <rect x="15" y="8" width="170" height="384" rx="38" fill="url(#ip1)"/>
+              <rect x="20" y="13" width="160" height="374" rx="34" fill="#1a1a1a"/>
+              <rect x="30" y="22" width="140" height="258" rx="20" fill="#050505"/>
+              <!-- Dynamic island -->
+              <rect x="70" y="30" width="60" height="22" rx="11" fill="#000"/>
+              <circle cx="97" cy="41" r="5" fill="#0a0a0a"/>
+              <!-- Camera bump -->
+              <rect x="28" y="295" width="80" height="80" rx="24" fill="#111"/>
+              <circle cx="55" cy="317" r="14" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
+              <circle cx="83" cy="317" r="14" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
+              <circle cx="68" cy="343" r="14" fill="#0a0a0a" stroke="#333" stroke-width="1"/>
+              <circle cx="55" cy="317" r="8" fill="#050505"/>
+              <circle cx="83" cy="317" r="8" fill="#050505"/>
+              <circle cx="68" cy="343" r="8" fill="#050505"/>
+              <!-- Screen glow -->
+              <rect x="32" y="24" width="136" height="254" rx="18" fill="rgba(0,198,255,0.05)"/>
+              <text x="100" y="150" text-anchor="middle" font-size="12" fill="rgba(0,198,255,0.5)" font-family="sans-serif">iPhone 17 Pro</text>
+              <!-- Side buttons -->
+              <rect x="0" y="100" width="5" height="40" rx="2.5" fill="#1a1a1a"/>
+              <rect x="0" y="150" width="5" height="60" rx="2.5" fill="#1a1a1a"/>
+              <rect x="195" y="120" width="5" height="70" rx="2.5" fill="#1a1a1a"/>
+            </svg>
+            <div class="slide-content">
+              <div class="eyebrow" style="color:var(--accent)">New Arrival 2025</div>
+              <div class="title" style="color:#fff">iPhone 17<br/>Pro Max</div>
+              <div class="subtitle">Titanium. So strong. So light.</div>
+              <div class="slide-badges">
+                <div class="slide-badge" style="background:rgba(0,198,255,0.15);border-color:rgba(0,198,255,0.3)"><i class="bi bi-camera-fill" style="color:var(--accent)"></i><div><b>48MP</b><span>CAMERA</span></div></div>
+                <div class="slide-badge" style="background:rgba(0,198,255,0.15);border-color:rgba(0,198,255,0.3)"><i class="bi bi-battery-full" style="color:var(--accent)"></i><div><b>ALL DAY</b><span>BATTERY</span></div></div>
+                <div class="slide-badge" style="background:rgba(255,107,0,0.15);border-color:rgba(255,107,0,0.3)"><i class="bi bi-credit-card-fill"></i><div><b>36 EMI</b><span>AVAIL</span></div></div>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Slide 3: Offer -->
+          <div class="slide slide-3">
+            <div class="slide-bg-deco">SALE</div>
+            <div class="slide-content">
+              <div class="eyebrow" style="color:var(--primary)">Limited Time Offer</div>
+              <div class="title" style="color:#fff">Up to <span style="color:var(--primary)">40%</span><br/>OFF Today!</div>
+              <div class="subtitle">Exchange Old Device — Get Extra Discount</div>
+              <div class="slide-badges">
+                <div class="slide-badge" style="background:rgba(255,107,0,0.2);border-color:rgba(255,107,0,0.4)"><i class="bi bi-arrow-repeat" style="color:var(--primary)"></i><div><b>EXCHANGE</b><span>OFFER</span></div></div>
+                <div class="slide-badge"><i class="bi bi-shield-check-fill" style="color:#00cc66"></i><div><b>WARRANTY</b><span>INCLUDED</span></div></div>
+                <div class="slide-badge"><i class="bi bi-truck" style="color:var(--accent2)"></i><div><b>FREE</b><span>DELIVERY</span></div></div>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Nav -->
+          <div class="slider-prev"><i class="bi bi-chevron-left"></i></div>
+          <div class="slider-next"><i class="bi bi-chevron-right"></i></div>
+          <div class="slider-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- ===== SIDE BANNERS (col-5 / col-12 on mobile) ===== -->
+      <div class="col-12 col-md-5 banners-col">
+        <!-- On mobile: flex row (side by side) -->
+        <div class="d-flex flex-column d-md-flex flex-md-column side-banners-mobile" style="height:100%;">
+ 
+          <!-- Banner 1: Apple Gadgets Care -->
+          <div class="side-banner banner-apple" style="flex:1;">
+            <!-- Tech circuit decoration -->
+            <svg style="position:absolute;right:0;top:0;width:55%;height:100%;opacity:0.15" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+              <line x1="20" y1="20" x2="180" y2="20" stroke="#00c6ff" stroke-width="1"/>
+              <line x1="180" y1="20" x2="180" y2="140" stroke="#00c6ff" stroke-width="1"/>
+              <line x1="60" y1="60" x2="140" y2="60" stroke="#00c6ff" stroke-width="1"/>
+              <circle cx="20" cy="20" r="4" fill="#00c6ff"/>
+              <circle cx="180" cy="20" r="4" fill="#00c6ff"/>
+              <circle cx="180" cy="140" r="4" fill="#00c6ff"/>
+              <circle cx="60" cy="60" r="3" fill="#00c6ff"/>
+              <circle cx="140" cy="60" r="3" fill="#00c6ff"/>
+              <line x1="20" y1="20" x2="20" y2="100" stroke="#00c6ff" stroke-width="1"/>
+              <line x1="20" y1="100" x2="60" y2="100" stroke="#00c6ff" stroke-width="1"/>
+              <circle cx="60" cy="100" r="5" fill="none" stroke="#00c6ff" stroke-width="1.5"/>
+              <line x1="100" y1="60" x2="100" y2="140" stroke="#00c6ff" stroke-width="1" stroke-dasharray="4,3"/>
+              <rect x="150" y="80" width="20" height="30" rx="3" fill="none" stroke="#00c6ff" stroke-width="1"/>
+              <line x1="155" y1="110" x2="155" y2="130" stroke="#00c6ff" stroke-width="1"/>
+              <line x1="165" y1="110" x2="165" y2="130" stroke="#00c6ff" stroke-width="1"/>
+            </svg>
+            <!-- Repair hand icon -->
+            <div style="position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:52px;opacity:0.12;color:#00c6ff;">
+              <i class="bi bi-tools"></i>
+            </div>
+            <div class="banner-apple-content">
+              <div class="apple-logo">
+                <i class="bi bi-apple"></i>
+                <span>iPhone Repair</span>
+              </div>
+              <div class="banner-title">আপনার পাশে<br/><em>Apple Gadgets Care</em></div>
+              <div class="banner-sub">যেকোনো প্রয়োজনে যোগাযোগ করুন</div>
+              <div class="phone-badge">
+                <i class="bi bi-telephone-fill"></i>
+                09678-149 149
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Banner 2: Panasonic Mixer -->
+          <div class="side-banner banner-panasonic" style="flex:1; margin-top: 12px;">
+            <!-- Mixer grinder SVG -->
+            <svg class="banner-panasonic-img" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" style="position:absolute;right:5px;bottom:0;height:105%;width:auto;z-index:1;animation:floatPhone 4.5s ease-in-out infinite;">
+              <defs>
+                <linearGradient id="mg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a2a2a"/><stop offset="100%" stop-color="#111"/></linearGradient>
+                <linearGradient id="mg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#3a3a3a"/><stop offset="100%" stop-color="#1a1a1a"/></linearGradient>
+              </defs>
+              <!-- Base -->
+              <ellipse cx="80" cy="185" rx="55" ry="12" fill="rgba(0,0,0,0.2)"/>
+              <rect x="45" y="120" width="70" height="70" rx="10" fill="url(#mg1)"/>
+              <rect x="50" y="125" width="60" height="60" rx="8" fill="url(#mg2)"/>
+              <circle cx="80" cy="140" r="12" fill="#444"/>
+              <circle cx="80" cy="140" r="7" fill="#222"/>
+              <!-- Jar 1 (main) -->
+              <rect x="52" y="40" width="56" height="85" rx="8" fill="url(#mg1)"/>
+              <rect x="56" y="44" width="48" height="77" rx="6" fill="rgba(60,60,60,0.8)"/>
+              <rect x="56" y="44" width="48" height="20" rx="6" fill="#333"/>
+              <circle cx="80" cy="44" r="12" fill="#2a2a2a"/>
+              <circle cx="80" cy="44" r="7" fill="#333"/>
+              <!-- Jar 2 (small left) -->
+              <rect x="10" y="70" width="38" height="55" rx="6" fill="url(#mg1)"/>
+              <rect x="13" y="73" width="32" height="49" rx="5" fill="rgba(55,55,55,0.7)"/>
+              <!-- Jar 3 (small right) -->
+              <rect x="112" y="70" width="38" height="55" rx="6" fill="url(#mg1)"/>
+              <rect x="115" y="73" width="32" height="49" rx="5" fill="rgba(55,55,55,0.7)"/>
+              <!-- Handles -->
+              <rect x="38" y="80" width="12" height="30" rx="5" fill="#1a1a1a"/>
+              <rect x="110" y="80" width="12" height="30" rx="5" fill="#1a1a1a"/>
+              <!-- Panasonic label -->
+              <text x="80" y="162" text-anchor="middle" font-size="7" fill="#666" font-family="sans-serif" font-weight="bold">PANASONIC</text>
+            </svg>
+            <div class="banner-panasonic-content">
+              <div class="brand-tag">Panasonic</div>
+              <div class="banner-title">Mixer Grinder<br/><span style="font-size:14px;font-weight:600">(3 Jars)</span></div>
+              <div class="banner-sub">Professional Grade Blending</div>
+              <div class="warranty-badge">
+                <i class="bi bi-shield-fill-check"></i>
+                5 Year Motor Warranty
+              </div>
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+    </div>
+ 
+    <!-- ===== FEATURES BAR ===== -->
+    <div class="features-bar mt-3 mb-3">
+      <div class="row g-0 align-items-center justify-content-around">
+        <div class="col feature-item">
+          <div class="feat-icon-wrap fi-1"><i class="bi bi-credit-card-2-front-fill"></i></div>
+          <div class="feat-label">36 Months<br/>EMI</div>
+        </div>
+        <div class="col-auto feature-divider d-none d-sm-block"></div>
+        <div class="col feature-item">
+          <div class="feat-icon-wrap fi-2"><i class="bi bi-truck"></i></div>
+          <div class="feat-label">Fastest Home<br/>Delivery</div>
+        </div>
+        <div class="col-auto feature-divider d-none d-sm-block"></div>
+        <div class="col feature-item">
+          <div class="feat-icon-wrap fi-3"><i class="bi bi-arrow-repeat"></i></div>
+          <div class="feat-label">Exchange<br/>Facility</div>
+        </div>
+        <div class="col-auto feature-divider d-none d-sm-block"></div>
+        <div class="col feature-item">
+          <div class="feat-icon-wrap fi-4"><i class="bi bi-tag-heart-fill"></i></div>
+          <div class="feat-label">Best Price<br/>Deals</div>
+        </div>
+        <div class="col-auto feature-divider d-none d-sm-block"></div>
+        <div class="col feature-item">
+          <div class="feat-icon-wrap fi-5"><i class="bi bi-headset"></i></div>
+          <div class="feat-label">After-Sales<br/>Service</div>
+        </div>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+ 
+</section>
+    </main>
+<!-- main ends here -->
+
+    <script src="./assets/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
