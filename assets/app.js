@@ -100,3 +100,44 @@ $(document).ready(function(){
 
 });
   // categories ends
+
+  // tranding slide js
+$(function () {
+  let current = 0;
+
+  function getVisible() {
+    const w = $(window).width();
+    if (w < 769) return 2;
+    if (w < 1025) return 3;
+    return 5;
+  }
+
+  function totalSlides() {
+    return Math.max(1, $('#sliderTrack .product-card').length - getVisible() + 1);
+  }
+
+  function buildDots() {
+    $('#sliderDots').empty();
+    for (let i = 0; i < totalSlides(); i++) {
+      $('<div class="dot' + (i === current ? ' active' : '') + '"></div>')
+        .on('click', (function(idx){ return function(){ goTo(idx); }; })(i))
+        .appendTo('#sliderDots');
+    }
+  }
+
+  function goTo(idx) {
+    const total = totalSlides();
+    current = Math.max(0, Math.min(idx, total - 1));
+    const cardW = $('#sliderTrack .product-card').outerWidth(true);
+    $('#sliderTrack').css('transform', 'translateX(-' + (current * cardW) + 'px)');
+    $('#sliderDots .dot').removeClass('active').eq(current).addClass('active');
+  }
+
+  $('#nextBtn').on('click', function () { goTo(current + 1); });
+  $('#prevBtn').on('click', function () { goTo(current - 1); });
+
+  $(window).on('resize', function () { buildDots(); goTo(current); });
+
+  buildDots();
+});
+  // end of tranding slider js
