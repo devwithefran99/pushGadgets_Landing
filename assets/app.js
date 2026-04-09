@@ -141,3 +141,82 @@ $(function () {
   buildDots();
 });
   // end of tranding slider js
+
+  // best product part JS
+$(function () {
+  let current = 0;
+  let activeTab = 'best';
+
+  function getVisible() {
+    const w = $('.fp-slider-wrap').width();
+    if (w < 500) return 2;
+    if (w < 800) return 3;
+    return 5;
+  }
+
+  function getCards() {
+    return $('.fp-card.show');
+  }
+
+  function totalSlides() {
+    return Math.max(1, getCards().length - getVisible() + 1);
+  }
+
+  function showTab(tab) {
+    activeTab = tab;
+    current = 0;
+    $('#fpTrack').css('transform', 'translateX(0)');
+    $('.fp-card').removeClass('show');
+    $('.fp-card[data-tab="' + tab + '"]').addClass('show');
+    buildDots();
+  }
+
+  function buildDots() {
+    const $dots = $('#fpDots').empty();
+    for (let i = 0; i < totalSlides(); i++) {
+      $('<div class="fp-dot' + (i === current ? ' active' : '') + '"></div>')
+        .on('click', (function (idx) { return function () { goTo(idx); }; })(i))
+        .appendTo($dots);
+    }
+  }
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, totalSlides() - 1));
+    const cw = getCards().first().outerWidth(true);
+    $('#fpTrack').css('transform', 'translateX(-' + (current * cw) + 'px)');
+    $('#fpDots .fp-dot').removeClass('active').eq(current).addClass('active');
+  }
+
+  $('#fpNext').on('click', function () { goTo(current + 1); });
+  $('#fpPrev').on('click', function () { goTo(current - 1); });
+
+  $('.fp-tab').on('click', function () {
+    $('.fp-tab').removeClass('active');
+    $(this).addClass('active');
+    showTab($(this).data('tab'));
+  });
+
+  $(window).on('resize', function () { buildDots(); goTo(current); });
+
+  showTab('best');
+});
+  // end of best products
+
+  // home applience starts
+
+$('.kitchen-filter').click(function(){
+
+$('.kitchen-filter').removeClass('active-filter')
+
+$(this).addClass('active-filter')
+
+let type = $(this).attr('data-type')
+
+$('.kitchen-item').hide()
+
+$('.'+type).fadeIn()
+
+})
+
+
+  // home applience ends

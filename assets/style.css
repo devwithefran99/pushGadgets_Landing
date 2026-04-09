@@ -29,7 +29,6 @@ ol,ul,li{
       --search-bg: #2c2c2c;
     }
  
-    * { box-sizing: border-box; margin: 0; padding: 0; }
  
     body {
       font-family: 'Inter', sans-serif;
@@ -566,7 +565,8 @@ ol,ul,li{
 
 /* features */
 .features-bar {
-  background: #f8f9fa;
+  background: #f8f9fa9a;
+  border: 1px solid #777;
 }
 .features-bar img{
   width: 40px;
@@ -587,6 +587,12 @@ ol,ul,li{
 
   .side-banner {
     height: 120px;
+  }
+  .features-bar p{
+    font-size: 12px;
+  }
+  .features-bar img{
+    font-size: 10px;
   }
 }
 /* hero ends */
@@ -679,6 +685,7 @@ ol,ul,li{
   .slider-track {
     display: flex;
     gap: 16px;
+   padding-top: 10px;
     transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
@@ -731,3 +738,124 @@ ol,ul,li{
     .product-card { flex: 0 0 calc(33.33% - 11px); }
   }
 /* tranding parts ends here */
+/* dealBanner starts */
+#dealBanner{
+  margin-bottom: 15px;
+}
+#dealBanner img{
+  width: 1270px;
+  max-width: 100%;
+  border-radius: 8px;
+
+}
+@media (min-width: 576px) and (max-width: 991px){
+  #dealBanner{
+    width: 100%;
+    max-width: fit-content;
+  }
+}
+/* dealBanner ends here */
+/* best product parts starts */
+.fp-section { padding: 28px 0;  }
+.fp-title { font-size: 26px; font-weight: 700; color: #222; }
+.fp-title span { color: #e65c00; }
+
+.fp-arrow {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  font-size: 18px; cursor: pointer;
+  transition: all 0.2s;
+}
+.fp-arrow:hover { border-color: var(--accent); color: var(--accent); transform: scale(1.08); }
+.fp-arrow:active { transform: scale(0.95); }
+
+.fp-tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+.fp-tab {
+  padding: 7px 20px; border-radius: 30px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: transparent; color: var(--text-muted);
+  font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all 0.22s;
+}
+.fp-tab.active { background: var(--text-main); border-color: var(--text-main); color: var(--bg-top); }
+.fp-tab:not(.active):hover { border-color: var(--text-main); color: var(--text-main); }
+
+.fp-slider-wrap { overflow: hidden; }
+.fp-track {
+  display: flex; gap: 16px;
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* by default sob card hide, active tab er card show hobe */
+.fp-card { display: none; }
+.fp-card.show {
+  display: block;
+  flex: 0 0 calc(20% - 13px);
+  border-radius: 14px; 
+  padding: 16px 14px 18px;
+  cursor: pointer;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.fp-card.show:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,107,0,0.4);
+  border: 1px solid var(--hover-color);
+}
+
+.fp-card img {
+  width: 100%; 
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  display: block;
+}
+.fp-card-name { font-size: 14px; font-weight: 600; color: #000; margin-bottom: 10px; line-height: 1.35; }
+.fp-price-now { font-size: 16px; font-weight: 700; color: #221f1f; }
+.fp-price-old { font-size: 12px; color: #555; text-decoration: line-through; }
+.fp-badge {
+  font-size: 11px; font-weight: 600;
+  background: rgba(87, 202, 63, 0.15); color: #166534;
+  border: 1px solid rgba(71, 192, 46, 0.336);
+  border-radius: 6px; padding: 2px 7px;
+}
+.fp-price-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+.fp-dots { display: flex; justify-content: center; gap: 6px; margin-top: 18px; }
+.fp-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(41, 36, 36, 0.459); cursor: pointer; transition: all 0.2s; }
+.fp-dot.active { background: var(--accent); transform: scale(1.35); }
+
+@media (max-width: 768px) { .fp-card.show { flex: 0 0 calc(50% - 8px); } }
+@media (min-width: 769px) and (max-width: 1024px) { .fp-card.show { flex: 0 0 calc(33.33% - 11px); } }
+/* best product part ends */
+
+/* home applience starts */
+.kitchen-filter-menu{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.kitchen-filter{
+border:none;
+padding:8px 18px;
+border-radius:20px;
+background:#eee;
+cursor:pointer;
+transition:.3s;
+}
+
+.active-filter{
+background:#ff6b00;
+color:white;
+}
+
+.kitchen-item{
+transition:.3s;
+}
+
+.kitchen-item .card{
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+/* home applience ends */
