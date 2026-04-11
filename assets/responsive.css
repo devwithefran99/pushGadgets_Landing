@@ -1,0 +1,26 @@
+@media (min-width:992px){
+
+.kitchen-item{
+min-width:25%;
+}
+
+}
+
+.kitchen-item .card{
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+  .kitchen-filter {
+    padding: 4px 10px;        
+    font-size: 12px;          
+    margin: 5px 6px 5px 0;    
+    border-radius: 30px;
+  }
+  .kitchen-filter-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+}

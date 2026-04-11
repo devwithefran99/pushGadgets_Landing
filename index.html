@@ -28,7 +28,7 @@
         <i class="bi bi-list"></i>
       </button>
  
-      <!-- Logo -->
+     
       <a href="#" class="nav-logo">
         <svg class="logo-icon" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
           <!-- Apple-like shape -->
@@ -44,13 +44,11 @@
         </div>
       </a>
  
-      <!-- Search -->
       <div class="search-wrap d-none d-lg-block">
         <i class="bi bi-search search-icon"></i>
         <input type="text" placeholder="Search..." autocomplete="off"/>
       </div>
  
-      <!-- Desktop top-right links -->
       <div class="top-links">
         <a href="#" class="top-link">Blog</a>
         <a href="#" class="top-link">Pre-order</a>
@@ -58,7 +56,6 @@
         <a href="#" class="compare-link"><i class="bi bi-arrow-left-right"></i> Compare</a>
       </div>
  
-      <!-- Icon buttons -->
       <div class="icon-wrapper">
   <a href="#" class="icon-btn d-none d-lg-flex" title="Cart">
     <i class="bi bi-cart2"></i>
@@ -72,7 +69,7 @@
   </div>
 </nav>
  
-<!-- ══════════════ BOTTOM CATEGORY NAV ══════════════ -->
+<!-- nav bottom -->
 <nav class="bottom-nav">
   <div class="container-fluid px-3 px-lg-4">
     <ul class="cat-nav">
@@ -167,7 +164,7 @@
   </div>
 </nav>
  
-<!-- ══════════════ MOBILE SIDEBAR ══════════════ -->
+<!-- mbl sidebar -->
 <div class="mobile-overlay" id="mobileOverlay"></div>
 <aside class="mobile-sidebar" id="mobileSidebar">
  
@@ -286,7 +283,7 @@
   <div class="container">
     <div class="row g-2">
 
-      <!-- ===== MAIN SLIDER ===== -->
+      <!-- main sidebar -->
       <div class="col-12 col-md-8">
         <div class="main-slider position-relative overflow-hidden rounded">
           <div class="slides position-relative w-100 h-100">
@@ -317,7 +314,7 @@
         </div>
       </div>
 
-      <!-- ===== SIDE BANNERS ===== -->
+      <!-- SIDE BANNERS -->
       <div class="col-12 col-md-4">
         <div class="d-flex flex-md-column gap-2 h-100">
 
@@ -334,7 +331,7 @@
 
     </div>
 
-    <!-- ===== FEATURES BAR ===== -->
+    <!--FEATURES BAR-->
     <div class="features-bar mt-3 p-3 rounded">
       <div class="row text-center g-2">
 
@@ -420,7 +417,7 @@
       <!-- HIDDEN ITEMS -->
       <div class="col-4 col-md-2 category-item extra d-none">
         <div class="cat-card">
-          <img src="assets/image/Apple-Watch-Series-10-Aluminum-Silver-7765.png">
+          <img src="assets/image/Apple-Watch-Series-11aaaa-4716.png">
           <p>Smart Watch</p>
         </div>
       </div>
@@ -545,7 +542,6 @@
           </div>
         </div>
 
-        <!-- আরো card যোগ করতে পারো একই ফরম্যাটে -->
 
       </div>
     </div>
@@ -588,7 +584,7 @@
   <div class="fp-slider-wrap">
     <div class="fp-track mt-5" id="fpTrack">
 
-      <!-- ==================== BEST DEALS CARDS ==================== -->
+      <!--  BEST DEALS CARDS  -->
 
       <!-- Card 1 -->
       <div class="fp-card" data-tab="best">
@@ -655,10 +651,10 @@
           <span class="fp-badge">৳3,000 OFF</span>
         </div>
       </div>
-      <!-- Card 6 — আরো best deal card যোগ করতে চাইলে এখানে copy করো -->
+      
 
 
-      <!-- ==================== TOP SELLING CARDS ==================== -->
+      <!-- TOP SELLING CARDS  -->
 
       <!-- Card 1 -->
       <div class="fp-card" data-tab="top">
@@ -716,8 +712,6 @@
         </div>
       </div>
 
-      <!-- Card 6 — আরো top selling card যোগ করতে চাইলে এখানে copy করো -->
-
     </div>
   </div>
 
@@ -728,81 +722,391 @@
 <!-- best products ends -->
  
 <!-- home applience part -->
-<section class="kitchen-section container py-5">
+<section class="kitchen-section">
+<div class="container">
 
-<h2 class="fw-bold mb-4">
-Home <span style="color:#ff6b00">Appliances</span>
-</h2>
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h2 class="fp-title">Kitchen <span>Items</span></h2>
 
-<!-- CATEGORY NAV -->
+<div class="d-flex gap-2">
+<button class="slide-arrow-btn" id="slidePrev">&#8249;</button>
+<button class="slide-arrow-btn" id="slideNext">&#8250;</button>
+</div>
+</div>
 
+
+<!-- FILTER MENU -->
 <div class="kitchen-filter-menu mb-4">
 
-<button class="kitchen-filter active-filter" data-type="appliance">
-Home Appliance
-</button>
-
-<button class="kitchen-filter" data-type="oven">
-Oven
-</button>
-
-<button class="kitchen-filter" data-type="fryer">
-Fryer
-</button>
-
-<button class="kitchen-filter" data-type="cooker">
-Cooker
-</button>
+<button class="kitchen-filter active-filter" data-type="appliance">Home Appliance</button>
+<button class="kitchen-filter" data-type="oven">Oven</button>
+<button class="kitchen-filter" data-type="gasStove">Gas Stove</button>
+<button class="kitchen-filter" data-type="cooker">Cooker</button>
 
 </div>
 
 
-<!-- PRODUCTS -->
+<!-- SLIDER -->
+<div class="slider-wrapper">
 
-<div class="row g-4 kitchen-products">
+<div class="kitchen-products">
 
-<div class="col-lg-3 col-md-4 col-6 kitchen-item appliance">
+<div class="kitchen-item col-6 col-md-4 col-lg-3 appliance">
 <div class="card p-3">
-<h6>Philips Mixer Grinder</h6>
+<img src="./assets/image/Gazi-Power-Smiss-Mixer-Grinder---1200W-9284.png">
+<h6> Mixer Grinder</h6>
 <p>৳ 6100</p>
 </div>
 </div>
 
-<div class="col-lg-3 col-md-4 col-6 kitchen-item appliance">
+<div class="kitchen-item col-6 col-md-4 col-lg-3 appliance">
 <div class="card p-3">
+<img src="./assets/image/Panasonic-MX-AV425-4-Jars-Mixer-Grinder---1500Ws-9070.jpg">
 <h6>Panasonic Mixer</h6>
 <p>৳ 12200</p>
 </div>
 </div>
 
-<div class="col-lg-3 col-md-4 col-6 kitchen-item oven">
+<div class="kitchen-item col-6 col-md-4 col-lg-3 appliance">
 <div class="card p-3">
+<img src="./assets/image/Jaipan-Family-Mate-3-Jars-Juicer-Mixer-Grinder---1000W-3483.jpg">
+<h6>Jaipan Mixer</h6>
+<p>৳ 12200</p>
+</div>
+</div>
+
+<div class="kitchen-item col-6 col-md-4 col-lg-3 appliance">
+<div class="card p-3">
+<img src="./assets/image/Orpat-Heavy-Duty-Mixer-Grinder-Blender-Juicer-Kitchen-Helper---2000W-5736.jpg">
+<h6>Orpat Mixer</h6>
+<p>৳ 12200</p>
+</div>
+</div>
+
+<div class="kitchen-item col-6 col-md-4 col-lg-3 appliance">
+<div class="card p-3">
+<img src="./assets/image/Miyako-HM-8006-Hand-Mixer-2653.jpg">
+<h6> Hand Mixer</h6>
+<p>৳ 12200</p>
+</div>
+</div>
+
+<div class="kitchen-item col-6 col-md-4 col-lg-3 oven">
+<div class="card p-3">
+<img src="./assets/image/Sharp-R-84A0(ST)V-Microwave-Oven-with-Grill-and-Convection---25L-2916.jpg">
 <h6>Electric Oven</h6>
 <p>৳ 8500</p>
 </div>
 </div>
 
-<div class="col-lg-3 col-md-4 col-6 kitchen-item fryer">
+<div class="kitchen-item col-6 col-md-4 col-lg-3 oven">
 <div class="card p-3">
-<h6>Air Fryer</h6>
+<img src="./assets/image/Sharp-R-34CT(ST)-Solo-Microwave-Oven---34L-5075.jpg">
+<h6>Electric Oven</h6>
+<p>৳ 8500</p>
+</div>
+</div>
+
+<div class="kitchen-item col-6 col-md-4 col-lg-3 oven">
+<div class="card p-3">
+<img src="./assets/image/Sharp-R-84A0(ST)V-Microwave-Oven-with-Grill-and-Convection---25L-2916.jpg">
+<h6>Electric Oven</h6>
+<p>৳ 8500</p>
+</div>
+</div>
+
+<div class="kitchen-item col-6 col-md-4 col-lg-3 oven">
+<div class="card p-3">
+<img src="./assets/image/Samsung-MS23K3513AKD2-Solo-Microwave-Oven---23Laa-4692.jpg">
+<h6>Electric Oven</h6>
+<p>৳ 8500</p>
+</div>
+</div>
+
+<div class="kitchen-item col-6 col-md-4 col-lg-3 oven">
+<div class="card p-3">
+<img src="./assets/image/Panasonic-NN-ST266B-Digital-Basic-Microwave-Oven---20L-5079.jpg">
+<h6>Electric Oven</h6>
+<p>৳ 8500</p>
+</div>
+</div>
+
+<div class="kitchen-item col-6 col-md-4 col-lg-3 gasStove">
+<div class="card p-3">
+  <img src="./assets/image/Gazi-EG-B712G-Smiss-Gas-Stove-5209.jpg" alt="">
+<h6>Gas Stove</h6>
 <p>৳ 6500</p>
 </div>
 </div>
 
-<div class="col-lg-3 col-md-4 col-6 kitchen-item cooker">
+<div class="kitchen-item col-6 col-md-4 col-lg-3 gasStove">
 <div class="card p-3">
+  <img src="./assets/image/Gazi-GH-8202M-Smiss-Gas-Stove-5738.jpg" alt="">
+<h6>Gas Stove</h6>
+<p>৳ 6500</p>
+</div>
+</div>
+
+<div class="kitchen-item col-6 col-md-4 col-lg-3 cooker">
+<div class="card p-3">
+  <img src="./assets/image/Minister-MI-RCB-Rice-Cooker---3L-8008.jpg" alt="">
+<h6>Rice Cooker</h6>
+<p>৳ 4500</p>
+</div>
+</div>
+<div class="kitchen-item col-6 col-md-4 col-lg-3 cooker">
+<div class="card p-3">
+  <img src="./assets/image/Minister-MI-RCR-Rice-Cooker-9567.jpg" alt="">
+<h6>Rice Cooker</h6>
+<p>৳ 4500</p>
+</div>
+</div>
+<div class="kitchen-item col-6 col-md-4 col-lg-3 cooker">
+<div class="card p-3">
+  <img src="./assets/image/Panasonic-SRG06-Rice-Cooker---0.jpg" alt="">
+<h6>Rice Cooker</h6>
+<p>৳ 4500</p>
+</div>
+</div>
+
+<div class="kitchen-item col-6 col-md-4 col-lg-3 cooker">
+<div class="card p-3">
+  <img src="./assets/image/Panasonic-SR-G28-Rice-Cooker---2.jpg" alt="">
+<h6>Rice Cooker</h6>
+<p>৳ 4500</p>
+</div>
+</div>
+
+<div class="kitchen-item col-6 col-md-4 col-lg-3 cooker">
+<div class="card p-3">
+  <img src="./assets/image/Westinghouse-WKRC10D28-Rice-Cooker---2.jpg" alt="">
 <h6>Rice Cooker</h6>
 <p>৳ 4500</p>
 </div>
 </div>
 
 </div>
+</div>
 
+</div>
+</section>
+<!-- home applience ends -->
+
+<!-- blogs part starts -->
+<section class="blog-section">
+  <div class="container">
+    <div class="row g-3">
+
+      <!-- Row 1: Card | Slider | Card -->
+
+      <div class="col-12 col-md-4 d-flex">
+        <div class="blog-card pink-bg w-100">
+          <h5>Bangladesh's Trusted Tech E-Commerce Store for Phones, Gadgets & Accessories</h5>
+          <p>In Bangladesh, Apple Gadgets has emerged as the primary source for genuine gadgets and accessories. We provide reliable brands all in one place — from the newest iPhones and iPads to robust MacBooks and wearables. Docks, hubs, safety gear, and stylus pens are also available. Our customer care representatives are available at all times to help with warranty inquiries, product selections, and post-purchase assistance.In Bangladesh, Apple Gadgets has emerged as the primary source for genuine gadgets and accessories. We provide reliable brands all in one place — from the newest iPhones and iPads to robust MacBooks and wearables. Docks, hubs, safety gear, and stylus pens are also available. Our customer care representatives are available at all times to help with warranty inquiries, product selections, and post-purchase assistance.</p>
+        </div>
+      </div>
+
+      <!-- SLIDER  -->
+      <div class="col-12 col-md-4 d-flex">
+        <div class="slider-card w-100">
+
+          <!-- Slide 1 — replace src with your image -->
+          <div class="slide-item active">
+            <img src="./assets/image/Induction-Cooker-Combo-5748.jpg" alt="Slide 1" class="img-fluid">
+          </div>
+
+          <!-- Slide 2 — replace src with your image -->
+          <div class="slide-item">
+            <img src="./assets/image/Power-Station-EcoFlow-E2000-7040.jpg" alt="Slide 2">
+          </div>
+
+          <!-- Slide 3 — replace src with your image -->
+          <div class="slide-item">
+            <img src="./assets/image/Induction-Cooker-Combo-5748.jpg" alt="Slide 3">
+          </div>
+
+          <button class="slider-arrow prev">&#8249;</button>
+          <button class="slider-arrow next">&#8250;</button>
+
+          <div class="slider-dots">
+            <button class="dot active" data-index="0"></button>
+            <button class="dot" data-index="1"></button>
+            <button class="dot" data-index="2"></button>
+            
+          </div>
+
+        </div>
+      </div>
+      <!-- ════════════════════════════════════════════════ -->
+
+      <div class="col-12 col-md-4 d-flex">
+        <div class="blog-card  pink-bg w-100">
+          <h5>Smartphones & Tablets from Apple, Samsung, Xiaomi, OnePlus & More</h5>
+          <p>Looking for a reliable smartphone or tablet? We bring you the most trusted brands including Apple, Samsung, Xiaomi, OnePlus, and more. From flagship powerhouses to value-packed models, pick based on your needs and budget. You'll also find the latest Galaxy Tabs and iPads for work, study, or entertainment. All phones and tablets come with guaranteed authenticity and after-sales support.Looking for a reliable smartphone or tablet? We bring you the most trusted brands including Apple, Samsung, Xiaomi, OnePlus, and more. From flagship powerhouses to value-packed models, pick based on your needs and budget. You'll also find the latest Galaxy Tabs and iPads for work, study, or entertainment. All phones and tablets come with guaranteed authenticity and after-sales support.</p>
+        </div>
+      </div>
+
+      <!-- Row 2: Card | Card | Card -->
+
+      <div class="col-12 col-md-4 d-flex d-none d-lg-block">
+        <div class="blog-card  green-bg w-100">
+          <h5>Mobile Accessories You Can Rely On — Cables, Cases, Power Banks</h5>
+          <p>The right accessories make your tech life easier. At Apple Gadgets, we offer fast-charging cables, durable power banks, magnetic wireless chargers, docks, and more. We also have high-quality phone covers and screen protectors. Need a stylus or an adapter for your MacBook? Our accessories are selected for both quality and compatibility, so they work exactly how you need them to.The right accessories make your tech life easier. At Apple Gadgets, we offer fast-charging cables, durable power banks, magnetic wireless chargers, docks, and more. We also have high-quality phone covers and screen protectors. Need a stylus or an adapter for your MacBook? Our accessories are selected for both quality and compatibility, so they work exactly how you need them to.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 d-flex d-none d-lg-block">
+        <div class="blog-card pink-bg w-100">
+          <h5>Smartwatches & Fitness Bands from Reliable Brands</h5>
+          <p>Smartwatches are more than just timekeepers — they're your health tracker, workout buddy, and personal assistant. At Apple Gadgets, we offer Apple Watch, Huawei Watch, Xiaomi bands, and other popular picks that blend design with daily usefulness. Check messages, track your steps, monitor heart rate, or just match your outfit. Original wearables with proper support and quick delivery.The right accessories make your tech life easier. At Apple Gadgets, we offer fast-charging cables, durable power banks, magnetic wireless chargers, docks, and more. We also have high-quality phone covers and screen protectors. Need a stylus or an adapter for your MacBook? Our accessories are selected for both quality and compatibility, so they work exactly how you need them to.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 d-flex d-none d-lg-block">
+        <div class="blog-card green-bg w-100">
+          <h5>AirPods, Wireless Earbuds & Premium Audio Devices</h5>
+          <p>Music should sound rich, clear, and uninterrupted. From original Apple AirPods to noise-cancelling earbuds, studio-quality over-ear headphones, and pocket-size Bluetooth speakers, we've got something for every listener. Whether you're commuting or zoning out at home, our devices bring sound to life. All products are tested, original, and tuned to give you a crisp audio experience every time.The right accessories make your tech life easier. At Apple Gadgets, we offer fast-charging cables, durable power banks, magnetic wireless chargers, docks, and more. We also have high-quality phone covers and screen protectors. Need a stylus or an adapter for your MacBook? Our accessories are selected for both quality and compatibility, so they work exactly how you need them to.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<!-- home applience ends -->
+<!-- blogs parts ends -->
     </main>
 <!-- main ends here -->
+
+<!-- footer part starts here -->
+<footer>
+   <div class="container py-5">
+    <div class="row g-4">
+
+      <!-- Brand & Contact -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="mb-3">
+          <div class="logo-apple">gad<span class="o">G</span>ets<sup style="font-size:10px;color:var(--text-muted)">™</sup></div>
+          <div class="footer-logo-text mt-1">Apple Gadgets</div>
+        </div>
+        <div class="mb-1">
+          <div class="footer-contact-item">
+            <span class="icon-wrap"><i class="bi bi-telephone-fill"></i></span>
+            <span style="font-size:13px;font-weight:500">Phone Number</span>
+          </div>
+          <div class="footer-contact-value">09678148148</div>
+        </div>
+        <div class="mb-3">
+          <div class="footer-contact-item">
+            <span class="icon-wrap"><i class="bi bi-envelope-fill"></i></span>
+            <span style="font-size:13px;font-weight:500">Email Address</span>
+          </div>
+          <div class="footer-contact-value">contact@applegadgetsbd.com</div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="#" class="store-btn">
+            <i class="bi bi-apple" style="font-size:20px"></i>
+            <div>
+              <span class="store-label-top">Download on the</span>
+              <span class="store-label-main">App Store</span>
+            </div>
+          </a>
+          <a href="#" class="store-btn">
+            <i class="bi bi-google-play" style="font-size:18px;color:#34a853"></i>
+            <div>
+              <span class="store-label-top">GET IT ON</span>
+              <span class="store-label-main">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Locations -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="footer-heading">Location</div>
+        <div class="location-item">
+          <span class="location-pin"><i class="bi bi-geo-alt-fill"></i></span>
+          <div>
+            <div class="location-name">Bashundhara City Shopping Complex</div>
+            <div class="location-detail">Basement 2, Shop 26</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="location-pin"><i class="bi bi-geo-alt-fill"></i></span>
+          <div>
+            <div class="location-name">Bashundhara City Shopping Complex</div>
+            <div class="location-detail">Level 5, Block A, Shop 6, 7, 8</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="location-pin"><i class="bi bi-geo-alt-fill"></i></span>
+          <div>
+            <div class="location-name">Jamuna Future Park</div>
+            <div class="location-detail">Level 4, Zone A (West Court), Shop 28D</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="location-pin"><i class="bi bi-geo-alt-fill"></i></span>
+          <div>
+            <div class="location-name">AG Care | Bashundhara City</div>
+            <div class="location-detail">Level 3, Block B, Shop 07</div>
+          </div>
+        </div>
+        <div class="location-item">
+          <span class="location-pin"><i class="bi bi-geo-alt-fill"></i></span>
+          <div>
+            <div class="location-name">AG Care | Jamuna Future Park</div>
+            <div class="location-detail">Level 4, Zone A (West Court), Shop 16B1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Us -->
+      <div class="col-6 col-lg-3">
+        <div class="footer-heading">About Us</div>
+        <a href="#" class="footer-link">About Us</a>
+        <a href="#" class="footer-link">Corporate</a>
+        <a href="#" class="footer-link">Order Tracking</a>
+        <a href="#" class="footer-link">Blog</a>
+        <a href="#" class="footer-link">Press Coverage</a>
+        <a href="#" class="footer-link">Careers</a>
+        <a href="#" class="footer-link">Complain / Advice</a>
+        <a href="#" class="footer-link">Contact Us</a>
+        <a href="#" class="footer-link">FAQs</a>
+      </div>
+
+      <!-- Policy -->
+      <div class="col-6 col-lg-3">
+        <div class="footer-heading">Policy</div>
+        <a href="#" class="footer-link">Privacy Policy</a>
+        <a href="#" class="footer-link">EMI and Payment Policy</a>
+        <a href="#" class="footer-link">Warranty Policy</a>
+        <a href="#" class="footer-link">Exchange Policy</a>
+        <a href="#" class="footer-link">Delivery Policy</a>
+        <a href="#" class="footer-link">Pre-Order Policy</a>
+        <a href="#" class="footer-link">Refund Policy</a>
+        <a href="#" class="footer-link">Return Policy</a>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <span class="footer-copy">© 2026 All rights reserved | Powered By <a href="https://github.com/devwithefran99"><i class="bi bi-code-slash"></i>DevWithErfan</a></span>
+        <div class="d-flex align-items-center gap-2">
+          <a href="#" class="whatsapp-btn"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- footer part ends here -->
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

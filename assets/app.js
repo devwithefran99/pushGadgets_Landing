@@ -204,19 +204,131 @@ $(function () {
 
   // home applience starts
 
-$('.kitchen-filter').click(function(){
+let position = 0
 
-$('.kitchen-filter').removeClass('active-filter')
+function getVisibleItems() {
+    if ($(window).width() < 768) return 2
+    if ($(window).width() < 992) return 3
+    return 4
+}
 
-$(this).addClass('active-filter')
+function updateButtons() {
+    let visibleItems = getVisibleItems()
+    let totalItems = $('.kitchen-item:visible').length
+    let itemWidth = $('.kitchen-item:visible').first().outerWidth(true)
+    let maxMove = (totalItems - visibleItems) * itemWidth
 
-let type = $(this).attr('data-type')
+    if (position <= 0) {
+        $('#slidePrev').addClass('disabled')
+    } else {
+        $('#slidePrev').removeClass('disabled')
+    }
 
-$('.kitchen-item').hide()
+    if (position >= maxMove) {
+        $('#slideNext').addClass('disabled')
+    } else {
+        $('#slideNext').removeClass('disabled')
+    }
+}
 
-$('.'+type).fadeIn()
+function filterProduct(type) {
+    $('.kitchen-item').hide()
+    $('.' + type).fadeIn()
 
+    position = 0
+    $('.kitchen-products').css('transform', 'translateX(0px)')
+
+    updateButtons()
+}
+
+$(document).ready(function () {
+
+    filterProduct('appliance')
+
+    $('.kitchen-filter').click(function () {
+        $('.kitchen-filter').removeClass('active-filter')
+        $(this).addClass('active-filter')
+
+        let type = $(this).data('type')
+        filterProduct(type)
+    })
+
+    $('#slideNext').click(function () {
+        let visibleItems = getVisibleItems()
+        let itemWidth = $('.kitchen-item:visible').first().outerWidth(true)
+        let totalItems = $('.kitchen-item:visible').length
+        let maxMove = (totalItems - visibleItems) * itemWidth
+
+        if (position < maxMove) {
+            position += itemWidth
+            $('.kitchen-products').css('transform', 'translateX(-' + position + 'px)')
+        }
+
+        updateButtons()
+    })
+
+    $('#slidePrev').click(function () {
+        let itemWidth = $('.kitchen-item:visible').first().outerWidth(true)
+
+        if (position > 0) {
+            position -= itemWidth
+            $('.kitchen-products').css('transform', 'translateX(-' + position + 'px)')
+        }
+
+        updateButtons()
+    })
+
+    $(window).resize(function () {
+        position = 0
+        $('.kitchen-products').css('transform', 'translateX(0px)')
+        updateButtons()
+    })
+
+    updateButtons()
 })
-
-
   // home applience ends
+
+  // blogs starts
+
+ $(function () {
+  var $slides = $('.slide-item');
+  var $dots   = $('.slider-dots .dot');
+  var total   = $slides.length;
+  var current = 0;
+  var timer;
+
+  function goTo(n) {
+    $slides.removeClass('active');
+    $dots.removeClass('active');
+    current = (n + total) % total;
+    $slides.eq(current).addClass('active');
+    $dots.eq(current).addClass('active');
+  }
+
+  function startAuto() {
+    timer = setInterval(function () { goTo(current + 1); }, 2500);
+  }
+
+  function resetAuto() {
+    clearInterval(timer);
+    startAuto();
+  }
+
+  $dots.on('click', function () {
+    goTo($(this).data('index'));
+    resetAuto();
+  });
+
+  $('.slider-arrow.next').on('click', function () {
+    goTo(current + 1);
+    resetAuto();
+  });
+
+  $('.slider-arrow.prev').on('click', function () {
+    goTo(current - 1);
+    resetAuto();
+  });
+
+  startAuto();
+});
+  // blogs js ends
